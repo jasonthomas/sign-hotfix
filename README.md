@@ -30,12 +30,12 @@ source ./venv/bin/activate
 ./sign.py -s https://example.com/path /path/to/file
 Enter username: foobar
 Enter password:
-/path/to/file  signed!
+/path/to/file signed!
 
 ```
 
-### M2Crypto on OSX ###
-I ran into issues getting M2Crypto to build on OSX. Use the following swig forula to get it working:
+### Swig + M2Crypto on OSX ###
+I ran into issues getting M2Crypto to build on OSX. Use the following brew formula to get it working:
 ```
 brew uninstall swig --force
 brew install homebrew/versions/swig304
