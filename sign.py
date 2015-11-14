@@ -51,9 +51,13 @@ def main():
                         "https://localhost/1.0/sign_app",
                         action="store", required=True)
 
+    parser.add_argument("-u", "--username",
+                        help="The username to authenticate with",
+                        action="store")
+
     args = parser.parse_args()
 
-    username = raw_input("Enter username: ")
+    username = args.username or raw_input("Enter username: ")
     password = getpass.getpass("Enter password: ")
 
     call_signing(args.filename, args.signer, (username, password))
